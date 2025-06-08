@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  supabase:
+    image: supabase/postgres:15
+    ports:
+      - "54321:5432"
+    environment:
+      POSTGRES_PASSWORD: supabase
+  mailgun:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+  twilio:
+    image: stub/twilio
+    ports:
+      - "3001:3000"
